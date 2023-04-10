@@ -1,43 +1,205 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+//color
 $primaire: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
+$blanc: #fff;
+$blanc-casse: #F2F2F2;
+$noir-claire: rgb(72, 70, 75);
+
 
 //polices
 $logo_titres: 'Shrikhand';
 $texte: 'Roboto';
 
+$font_size_text: 16px;
+$font_size_titre: 19px;
+@mixin font_size_icon($font_size_icon) {
+  font-size: $font_size_icon;
+}
+
+
 body {
-    margin-left: 0px;
-    margin-right: 0px;
+  margin: 0px;
 }
 
 header {
-    width: 100%;
-    height: 80px;
-    text-align: center;
+  width: 100%;
+  height: 60px;
+  text-align: center;
 
-
-    img {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 35%;
-    }
+  .mt-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  img {
+    width: 35%;
+  }
 }
+h2 {
+  font-family: $logo_titres, sans-serif;
+  margin-left: 18px;
+}
+.margin-content {
+  margin: 15px;
+}
+.type-menu{
+  border-bottom: 3px solid $tertiaire;
+  width: 50px;
+}
+.text__police {
+  font-size: $font_size_text;
+  font-family: $texte, sans-serif;
+}
+.btn {
+  padding: 13px;
+  background: linear-gradient(to bottom right, $secondaire, $primaire);
+  color: $blanc;
+  border-radius: 100px;
+  border: 1px solid $secondaire;
+  margin-top: 50px;
+  box-shadow: 0px 2px 5px #929292;
+  &:hover {
+      opacity: 0.8;
+      box-shadow: 0px 2px 5px #414040;
+  }
+}
+.margin-top {
+  margin-top: 50px;
+}
+
+.margin-bottom {
+  margin-bottom: 50px;
+}
+main {
+  .ohmyfood-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $blanc-casse;
+
+    &__img {
+      height: 230px;
+      width: 100%;
+
+      img {
+        height: 280px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &__content {
+      height: auto;
+      width: 100%;
+      border-radius: 40px 40px 0px 0px;
+      background-color: $blanc-casse;
+      &-card {
+        width: auto;
+        height: 45px;
+        background-color: $blanc;
+        transform: scale(1);
+        padding: 15px 20px 15px 10px;
+        border-radius: 20px;
+        font-size: $font_size_text;
+        span {
+          font-weight: bold;
+          i {
+            @include font_size_icon(13px);
+          }
+          
+        }
+      }
+    }
+
+    .content-grille-card {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      grid-gap: 10px;
+    }
+    
+    .content {
+      grid-column: 1;
+      grid-row: 1;
+      font-weight: bold;
+      font-size: $font_size_text;
+    
+    }
+    
+    .content-2 {
+      grid-column: 1;
+      grid-row: 2;
+    
+    }
+    
+    .icon {
+      grid-column: 2;
+      grid-row: 2;
+      text-align: end;
+    
+    }
+  }
+}
+
+.disposition-horizotal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-top {
+    margin-top: 25px;
+    margin-right: 40px;
+    @include font_size_icon(22px);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
 .content-grille {
-    display: grid;
-    grid-template-columns: 0.2fr 3fr;
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 2.5fr;
+  grid-gap: 10px;
+}
+
+.retour {
+  grid-column: 1;
+  grid-row: 1;
+
+}
+
+.logo {
+  grid-column: 3;
+  grid-row: 1;
+
+}
+
+
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(72, 70, 75);
+  color: #fff;
+
+  a {
+      text-decoration: none;
+      color: #fff;
+
+      i {
+          margin-right: 5px;
+      }
   }
-  .retour {
-    grid-column: 1;
-    grid-row: 1;
-    
+
+  ul li {
+      list-style-type: none;
+      line-height: 2;
+      margin-left: -22px;
   }
-  .logo {
-    grid-column: 3;
-    grid-row: 1;
-    
-  }
+
+
+
+}
+

@@ -1,29 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood</title>
-    <link rel="stylesheet" href="style-menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ohmyfood</title>
+  <link rel="stylesheet" href="style-menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
+
 <body>
-    <header class="content-grille">
-        <i class="fas fa-map-marker-alt retour"></i>
-        <img class="logo" src="../images/logo/ohmyfood.png" alt="logo ohmyfood">
-    </header>
-    <main>
-        <p>
-            Salut les gens
-        </p>
-        <p>
-            <a href="#" class="btn">OK</a>
-            <a href="#" class="btn-danger">Supprimer</a>
-        </p>
-    </main>
-    <footer></footer>
+  <header class="content-grille">
+    <i class="fas fa-arrow-left retour mt-header"></i>
+    <img class="logo mt-header" src="../images/logo/ohmyfood.png" alt="logo ohmyfood">
+  </header>
+  <main>
+    <div class="ohmyfood-detail">
+      <div class="ohmyfood-detail__img">
+        <img src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du gout">
+      </div>
+      <div class="ohmyfood-detail__content margin-bottom">
+        <div class="disposition-horizotal">
+          <h2>La palette du gout</h2>
+          <i class="far fa-heart icon-top" aria-hidden="true"></i>
+        </div>
+
+        <div>
+          <h3 class="margin-content type-menu">ENTREES</h3>
+          <div class="ohmyfood-detail__content-card content-grille-card margin-content">
+            <label class="content">Fricasséé d'escargot</label>
+            <label class="content-2">
+              Au piment d'espelette
+            </label>
+            <span class="icon">25<i class="fas fa-euro-sign"></i></span>
+
+          </div>
+
+          <div class="ohmyfood-detail__content-card content-grille-card margin-content">
+            <label class="content">Froie gras de canard mi-cuit</label>
+            <label class="content-2">
+              Et ses copeaux de truffe noire
+            </label>
+            <span class="icon">35<i class="fas fa-euro-sign"></i></span>
+
+          </div>
+          <div class="ohmyfood-detail__content-card content-grille-card margin-content">
+            <label class="content">Oeuf au plat</label>
+            <label class="content-2">
+              Assaisonné à la truffe sur lit de caviar
+            </label>
+            <span class="icon">20<i class="fas fa-euro-sign"></i></span>
+
+          </div>
+
+          <h3 class="margin-content type-menu margin-top">PLATS</h3>
+          <div class="ohmyfood-detail__content-card content-grille-card margin-content">
+            <label class="content">Filet de boeuf aux herbes</label>
+            <label class="content-2">
+              Accompagné de sa ribambelle de légumes
+            </label>
+            <span class="icon">40<i class="fas fa-euro-sign"></i></span>
+
+          </div>
+
+          <div class="ohmyfood-detail__content-card content-grille-card margin-content">
+            <label class="content">Parmentier de queue de boeuf</label>
+            <label class="content-2">
+              À la truffe noire sur sa purée de panais
+            </label>
+            <span class="icon">35<i class="fas fa-euro-sign"></i></span>
+
+          </div>
+          <div class="ohmyfood-detail__content-card content-grille-card margin-content">
+            <label class="content">Filet de turbot</label>
+            <label class="content-2">
+              Aux agrumes
+            </label>
+            <span class="icon">44<i class="fas fa-euro-sign"></i></span>
+
+          </div>
+
+          <h3 class="margin-content type-menu margin-top">DESSERTS</h3>
+          <div class="ohmyfood-detail__content-card content-grille-card margin-content">
+            <label class="content">Paris-Brest</label>
+            <label class="content-2">
+              Revisité
+            </label>
+            <span class="icon">18<i class="fas fa-euro-sign"></i></span>
+
+          </div>
+
+          <div class="ohmyfood-detail__content-card content-grille-card margin-content">
+            <label class="content">Macaron au chocolat d'exception</label>
+            <label class="content-2">
+              Et glace à la vanille de Madagascar
+            </label>
+            <span class="icon">22<i class="fas fa-euro-sign"></i></span>
+
+          </div>
+          <div class="ohmyfood-detail__content-card content-grille-card margin-content">
+            <label class="content">Mousse au chocolat</label>
+            <label class="content-2">
+              Au piment d'Espelette et à la truffe noire
+            </label>
+            <span class="icon">23<i class="fas fa-euro-sign"></i></span>
+          </div>
+
+        </div>
+        <div class="text-align-center">
+          <button class="btn text__police">Commander</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <footer>
+    <h2>ohmyfood</h2>
+    <ul class="text__police pl-ul">
+        <li><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
+        <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</footer>
 </body>
+
 </html>
