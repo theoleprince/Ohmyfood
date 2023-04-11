@@ -160,9 +160,24 @@ main {
   justify-content: space-between;
 }
 
+.ohmyfood-restaurant__desc {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px 20px 20px;
+  font-size: 17px;
+}
+
+.ohmyfood-restaurant__iconCoeur i {
+  font-size: 30px;
+  color: #000;
+  // &:hover {
+  //     color: $primaire;
+  // }
+}
+
 .icon-top {
     margin-top: 25px;
-    margin-right: 40px;
+    // margin-right: 40px;
     @include font_size_icon(22px);
 }
 
@@ -214,28 +229,78 @@ footer {
 
 }
 
-
-
 .d1{
-  animation-name: opacity;
-  animation-duration: 2s;
+  animation-duration: 1s; 
 }
 .d2{
-  animation-name: opacity;
-  animation-duration: 4s;
+  animation-duration: 1.5s;
 }
 .d3{
-  animation-name: opacity;
-  animation-duration: 6s;
+  animation-duration: 2s;
 }
-@keyframes opacity{
-  from{opacity: 0%;}
-  50%{opacity: 50%;}
-  to{opacity: 100%;}
+.d4{
+  animation-duration: 2.5s; 
+}
+.d5{
+  animation-duration: 3s;
+}
+.d6{
+  animation-duration: 3.5s;
+}
+.d7{
+  animation-duration: 4s; 
+}
+.d8{
+  animation-duration: 4.5s;
+}
+.d9{
+  animation-duration: 5s;
+}
+.ohmyfood-detail__content-card {
+  opacity: 0;
+  animation-name: mouve-up;
+  animation-fill-mode: forwards;
+  // animation-duration: 3s;
+}
+@keyframes mouve-up{
+  0%{opacity: 0%;}
+  100%{
+    opacity: 100%;
+    transform: translateY(15px);
+  }
 }
 
-@keyframes transition {
-  0%   { margin-top: -70px; }
-  100% { margin-left: 0; }
+@keyframes opacity{
+  0%{opacity: 0%;}
+  100%{
+    opacity: 100%;
+  }
+}
+
+@keyframes coulor {
+  0%   { 
+    color: #ffc4ee;
+   }
+  50%   { 
+    color: #fda3e4;
+   }
+  100% { 
+    color: $secondaire;
+   }
+}
+
+.heart-end-hover {
+  color: #fff;
+  position: absolute;
+  margin-left: -30px;
+  opacity: 0;
+}
+
+
+.heart-end-hover:hover{
+  animation-name: opacity, coulor;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+
 }
 

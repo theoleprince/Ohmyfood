@@ -154,6 +154,18 @@ main {
             margin: 20px 30px 20px 20px;
             font-size: 17px;
         }
+
+        .nouveau {
+            padding: 5px 20px 5px 10px;
+            width: 50px;
+            background-color: $tertiaire;
+            color:#37685c;
+            position: absolute;
+            right: 30px;
+            border-radius: 5px;
+            margin-top: 20px;
+            
+        }
     }
 
     .ohmyfood-restaurant__desc .ohmyfood-restaurant__titre {
@@ -165,9 +177,9 @@ main {
     .ohmyfood-restaurant__iconCoeur i {
         font-size: 30px;
         color: #000;
-        &:hover {
-            color: $primaire;
-        }
+        // &:hover {
+        //     color: $primaire;
+        // }
     }
 }
 
@@ -201,13 +213,30 @@ main {
     
   }
 
+  @keyframes opacity{
+    0%{opacity: 0%;}
+    50%{opacity: 50%;}
+    100%{opacity: 100%;}
+  }
 
-// .btn-danger {
-//     @extend .btn;
+  @keyframes coulor {
+    0%   { color: #ffc4ee; }
+    50%   { color: #fda3e4; }
+    100% { color: $secondaire; }
+  }
 
-//     background: red;
+  .heart-end-hover {
+    color: #fff;
+    position: absolute;
+    margin-left: -30px;
+    opacity: 0;
+  }
 
-//     &:hover {
-//         background: rgb(116, 38, 38);
-//     }
-// }
+
+  .heart-end-hover:hover{
+    animation-name: opacity, coulor;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  
+  }
+
