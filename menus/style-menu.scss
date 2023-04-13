@@ -14,8 +14,9 @@ $noir-claire: rgb(72, 70, 75);
 $logo_titres: 'Shrikhand';
 $texte: 'Roboto';
 
-$font_size_text: 16px;
+$font_size_text: 19px;
 $font_size_titre: 19px;
+
 @mixin font_size_icon($font_size_icon) {
   font-size: $font_size_icon;
 }
@@ -34,25 +35,31 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
   img {
     width: 35%;
   }
 }
+
 h2 {
   font-family: $logo_titres, sans-serif;
   margin-left: 18px;
 }
+
 .margin-content {
   margin: 15px;
 }
-.type-menu{
+
+.type-menu {
   border-bottom: 3px solid $tertiaire;
   width: 50px;
 }
+
 .text__police {
   font-size: $font_size_text;
   font-family: $texte, sans-serif;
 }
+
 .btn {
   padding: 13px;
   background: linear-gradient(to bottom right, $secondaire, $primaire);
@@ -61,11 +68,13 @@ h2 {
   border: 1px solid $secondaire;
   margin-top: 50px;
   box-shadow: 0px 2px 5px #929292;
+
   &:hover {
-      opacity: 0.8;
-      box-shadow: 0px 2px 5px #414040;
+    opacity: 0.8;
+    box-shadow: 0px 2px 5px #414040;
   }
 }
+
 .margin-top {
   margin-top: 50px;
 }
@@ -73,6 +82,7 @@ h2 {
 .margin-bottom {
   margin-bottom: 50px;
 }
+
 main {
   .ohmyfood-detail {
     display: flex;
@@ -97,29 +107,28 @@ main {
       width: 100%;
       border-radius: 40px 40px 0px 0px;
       background-color: $blanc-casse;
-      &-card {
-        width: auto;
-        height: 45px;
-        background-color: $blanc;
-        transform: scale(1);
-        padding: 15px 20px 15px 10px;
-        border-radius: 20px;
-        font-size: $font_size_text;
-        span {
-          font-weight: bold;
-          i {
-            @include font_size_icon(13px);
-          }
-          
-        }
-      }
+
+      // &-card {
+      //   display: flex;
+      //   justify-content: space-between;
+      //   width: auto;
+      //   height: 45px;
+      //   background-color: $blanc;
+      //   transform: scale(1);
+      //   padding: 15px 20px 15px 10px;
+      //   border-radius: 20px;
+      //   font-size: $font_size_text;
+
+      // }
     }
+
     .ohmyfood-detail__content-card:hover {
       .content-grille-card {
         display: grid;
         grid-template-columns: auto auto auto;
         grid-gap: 10px;
       }
+
       .content-3 {
         grid-column: 3;
         background-color: #414040;
@@ -132,25 +141,25 @@ main {
       grid-template-columns: 3fr 1fr;
       grid-gap: 10px;
     }
-    
+
     .content {
       grid-column: 1;
       grid-row: 1;
       font-weight: bold;
       font-size: $font_size_text;
     }
-    
+
     .content-2 {
       grid-column: 1;
       grid-row: 2;
-    
+
     }
-    
+
     .icon {
       grid-column: 2;
       grid-row: 2;
       text-align: end;
-    
+
     }
   }
 }
@@ -176,9 +185,9 @@ main {
 }
 
 .icon-top {
-    margin-top: 25px;
-    // margin-right: 40px;
-    @include font_size_icon(22px);
+  margin-top: 25px;
+  // margin-right: 40px;
+  @include font_size_icon(22px);
 }
 
 .text-align-center {
@@ -211,82 +220,100 @@ footer {
   color: #fff;
 
   a {
-      text-decoration: none;
-      color: #fff;
+    text-decoration: none;
+    color: #fff;
 
-      i {
-          margin-right: 5px;
-      }
+    i {
+      margin-right: 5px;
+    }
   }
 
   ul li {
-      list-style-type: none;
-      line-height: 2;
-      margin-left: -22px;
+    list-style-type: none;
+    line-height: 2;
+    margin-left: -22px;
   }
 
 
 
 }
 
-.d1{
-  animation-duration: 1s; 
+.d1 {
+  animation-duration: 1s;
 }
-.d2{
+
+.d2 {
   animation-duration: 1.5s;
 }
-.d3{
+
+.d3 {
   animation-duration: 2s;
 }
-.d4{
-  animation-duration: 2.5s; 
+
+.d4 {
+  animation-duration: 2.5s;
 }
-.d5{
+
+.d5 {
   animation-duration: 3s;
 }
-.d6{
+
+.d6 {
   animation-duration: 3.5s;
 }
-.d7{
-  animation-duration: 4s; 
+
+.d7 {
+  animation-duration: 4s;
 }
-.d8{
+
+.d8 {
   animation-duration: 4.5s;
 }
-.d9{
+
+.d9 {
   animation-duration: 5s;
 }
+
 .ohmyfood-detail__content-card {
   opacity: 0;
   animation-name: mouve-up;
   animation-fill-mode: forwards;
   // animation-duration: 3s;
 }
-@keyframes mouve-up{
-  0%{opacity: 0%;}
-  100%{
+
+@keyframes mouve-up {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
     opacity: 100%;
     transform: translateY(15px);
   }
 }
 
-@keyframes opacity{
-  0%{opacity: 0%;}
-  100%{
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
     opacity: 100%;
   }
 }
 
 @keyframes coulor {
-  0%   { 
+  0% {
     color: #ffc4ee;
-   }
-  50%   { 
+  }
+
+  50% {
     color: #fda3e4;
-   }
-  100% { 
+  }
+
+  100% {
     color: $secondaire;
-   }
+  }
 }
 
 .heart-end-hover {
@@ -297,10 +324,73 @@ footer {
 }
 
 
-.heart-end-hover:hover{
+.heart-end-hover:hover {
   animation-name: opacity, coulor;
   animation-duration: 3s;
   animation-fill-mode: forwards;
 
 }
 
+
+.ohmyfood-detail__content-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 80px;
+  background-color: $blanc;
+  transform: scale(1);
+  border-radius: 20px;
+  font-size: $font_size_text;
+  margin: 15px;
+  .card-description{
+    padding: 0px 0px 0px 20px;
+  }
+  .card-description:nth-child(1) {
+    flex: 3.5;
+  }
+  .card--price:nth-child(2) {
+    flex: 0.5;
+  }
+  .card--check-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    height: 80px;
+    font-size: 23px;
+    transition: width .5s;
+    border-radius: 0 1rem 1rem 0;
+    color: #fff;
+    background-color: #000;
+  }
+
+  &:hover {
+    .card--check-circle {
+      width: 90px;
+      height: 80px;
+      display: flex;
+      background-color: $tertiaire;
+    }
+  }
+
+  .icon-fa {
+    opacity: 0;
+    transition-delay: .5s;
+    transition: .5s ease-in-out;
+  }
+
+  &:hover .icon-fa {
+    opacity: 1;
+    transform: rotate(1turn);
+  }
+
+  .card--price {
+    margin: 2rem 1rem 1rem 0;
+    // text-align: end;
+  }
+}
+
+// @mixin box-shadow($colour: $colour-shadow, $size: $shadow-size) {
+//   box-shadow: $colour $size;
+// }

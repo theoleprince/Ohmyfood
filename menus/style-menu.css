@@ -32,7 +32,7 @@ h2 {
 }
 
 .text__police {
-  font-size: 16px;
+  font-size: 19px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -80,21 +80,6 @@ main .ohmyfood-detail__content {
   border-radius: 40px 40px 0px 0px;
   background-color: #F2F2F2;
 }
-main .ohmyfood-detail__content-card {
-  width: auto;
-  height: 45px;
-  background-color: #fff;
-  transform: scale(1);
-  padding: 15px 20px 15px 10px;
-  border-radius: 20px;
-  font-size: 16px;
-}
-main .ohmyfood-detail__content-card span {
-  font-weight: bold;
-}
-main .ohmyfood-detail__content-card span i {
-  font-size: 13px;
-}
 main .ohmyfood-detail .ohmyfood-detail__content-card:hover .content-grille-card {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -114,7 +99,7 @@ main .ohmyfood-detail .content {
   grid-column: 1;
   grid-row: 1;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 19px;
 }
 main .ohmyfood-detail .content-2 {
   grid-column: 1;
@@ -268,6 +253,58 @@ footer ul li {
   animation-name: opacity, coulor;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+}
+
+.ohmyfood-detail__content-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 80px;
+  background-color: #fff;
+  transform: scale(1);
+  border-radius: 20px;
+  font-size: 19px;
+  margin: 15px;
+}
+.ohmyfood-detail__content-card .card-description {
+  padding: 0px 0px 0px 20px;
+}
+.ohmyfood-detail__content-card .card-description:nth-child(1) {
+  flex: 3.5;
+}
+.ohmyfood-detail__content-card .card--price:nth-child(2) {
+  flex: 0.5;
+}
+.ohmyfood-detail__content-card .card--check-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0px;
+  height: 80px;
+  font-size: 23px;
+  transition: width 0.5s;
+  border-radius: 0 1rem 1rem 0;
+  color: #fff;
+  background-color: #000;
+}
+.ohmyfood-detail__content-card:hover .card--check-circle {
+  width: 90px;
+  height: 80px;
+  display: flex;
+  background-color: #99E2D0;
+}
+.ohmyfood-detail__content-card .icon-fa {
+  opacity: 0;
+  transition-delay: 0.5s;
+  transition: 0.5s ease-in-out;
+}
+.ohmyfood-detail__content-card:hover .icon-fa {
+  opacity: 1;
+  transform: rotate(1turn);
+}
+.ohmyfood-detail__content-card .card--price {
+  margin: 2rem 1rem 1rem 0;
 }
 
 /*# sourceMappingURL=style-menu.css.map */
