@@ -39,6 +39,9 @@ main {
     
         .card-description {
             padding: 0px 0px 0px 20px;
+            label {
+                line-height: 1.8;
+            }
         }
     
         .card-description:nth-child(1) {
@@ -87,7 +90,7 @@ main {
         @include font_size_icon(22px);
     }  
 
-    .ohmyfood-restaurant__titre {
+    .ohmyfood-detail__titre {
         margin-left: -20px;
     }
 }

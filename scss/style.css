@@ -52,6 +52,7 @@ main .card-item {
   margin: 15px 15px 15px 40px;
   padding: 25px;
   box-shadow: 0px 2px 5px #F2F2F2;
+  background-color: #F2F2F2;
 }
 main .card-item i {
   color: #636363;
@@ -112,6 +113,9 @@ main .badge {
 main .badge .position-badge {
   top: 270px;
 }
+main .ohmyfood-restaurant__titre {
+  line-height: 1.5;
+}
 
 main .ohmyfood-detail {
   display: flex;
@@ -148,6 +152,9 @@ main .ohmyfood-detail__content-card {
 main .ohmyfood-detail__content-card .card-description {
   padding: 0px 0px 0px 20px;
 }
+main .ohmyfood-detail__content-card .card-description label {
+  line-height: 1.8;
+}
 main .ohmyfood-detail__content-card .card-description:nth-child(1) {
   flex: 3.5;
 }
@@ -183,7 +190,7 @@ main .icon-top {
   margin-top: 25px;
   font-size: 22px;
 }
-main .ohmyfood-restaurant__titre {
+main .ohmyfood-detail__titre {
   margin-left: -20px;
 }
 

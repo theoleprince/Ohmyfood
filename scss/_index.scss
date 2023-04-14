@@ -37,7 +37,8 @@ main {
         @extend %width;
         margin: 15px 15px 15px 40px;
         padding: 25px;
-        box-shadow: 0px 2px 5px #F2F2F2;
+        box-shadow: 0px 2px 5px $bg-color;
+        background-color: $bg-color;
         @extend %border-radius;
 
         i {
@@ -115,5 +116,7 @@ main {
             top: 270px;
         }
     }
-
+    .ohmyfood-restaurant__titre {
+        line-height: 1.5;
+    }
 }
