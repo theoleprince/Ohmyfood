@@ -1,0 +1,93 @@
+main {
+    .ohmyfood-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $blanc;
+
+        &__img {
+            height: 230px;
+            width: 100%;
+
+            img {
+                height: 280px;
+                width: 100%;
+                @extend %img-cover;
+            }
+        }
+
+        &__content {
+            height: auto;
+            @extend %width;
+            border-radius: 40px 40px 0px 0px;
+            background-color: $blanc;
+        }
+    }
+
+    .ohmyfood-detail__content-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        height: 80px;
+        background-color: $blanc;
+        box-shadow: 0px 2px 5px $color-box-shadow;
+        transform: scale(1);
+        border-radius: 20px;
+        font-size: $font_size_text;
+        margin: 15px;
+    
+        .card-description {
+            padding: 0px 0px 0px 20px;
+        }
+    
+        .card-description:nth-child(1) {
+            flex: 3.5;
+        }
+    
+        .card--price:nth-child(2) {
+            flex: 0.5;
+        }
+    
+        .card--check-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 0px;
+            height: 80px;
+            font-size: 23px;
+            transition: width .5s;
+            border-radius: 0 1rem 1rem 0;
+            color: #fff;
+            background-color: #000;
+        }
+    
+        &:hover {
+            .card--check-circle {
+                width: 90px;
+                background-color: $tertiaire;
+            }
+        }
+    
+        .card--price {
+            margin: 2rem 1rem 1rem 0;
+        }
+    }
+    .grid-template-columns--header {
+        grid-template-columns: 0.5fr 0.5fr 2.5fr;
+        .retour {
+            grid-column: 1;
+            @extend %grid-row;
+        
+        }
+    }
+    
+    .icon-top {
+        margin-top: 25px;
+        @include font_size_icon(22px);
+    }  
+
+    .ohmyfood-restaurant__titre {
+        margin-left: -20px;
+    }
+}

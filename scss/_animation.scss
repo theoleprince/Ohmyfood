@@ -1,0 +1,98 @@
+  @keyframes coulor {
+      0% {
+          color: #ffc4ee;
+      }
+
+      50% {
+          color: #fda3e4;
+      }
+
+      100% {
+          color: $secondaire;
+      }
+  }
+
+
+  @keyframes mouve-up {
+      0% {
+          opacity: 0%;
+      }
+
+      100% {
+          opacity: 100%;
+          transform: translateY(15px);
+      }
+  }
+
+  @keyframes opacity {
+      0% {
+          opacity: 0%;
+      }
+
+      100% {
+          opacity: 100%;
+      }
+  }
+
+
+  .d1 {
+      animation-duration: 1s;
+  }
+
+  .d2 {
+      animation-duration: 1.5s;
+  }
+
+  .d3 {
+      animation-duration: 2s;
+  }
+
+  .d4 {
+      animation-duration: 2.5s;
+  }
+
+  .d5 {
+      animation-duration: 3s;
+  }
+
+  .d6 {
+      animation-duration: 3.5s;
+  }
+
+  .d7 {
+      animation-duration: 4s;
+  }
+
+  .d8 {
+      animation-duration: 4.5s;
+  }
+
+  .d9 {
+      animation-duration: 5s;
+  }
+
+  .ohmyfood-detail__content-animation {
+      opacity: 0;
+      animation-name: mouve-up;
+      @extend %animation-fill-mode;
+  }
+
+  .ohmyfood-detail__content-card {
+      .icon-fa {
+          opacity: 0;
+          // transition-delay: .5s;
+          transition: .5s ease-in-out;
+      }
+
+      &:hover .icon-fa {
+          opacity: 1;
+          transform: rotate(1turn);
+      }
+  }
+
+  .heart-end-hover:hover {
+      animation-name: opacity, coulor;
+      animation-duration: 3s;
+      @extend %animation-fill-mode;
+
+  }

@@ -1,0 +1,121 @@
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.text__police {
+    @include font-size($font_size_text);
+    font-family: $texte, sans-serif;
+}
+
+h2 {
+    font-family: $logo_titres, sans-serif;
+    display: block;
+    list-style-type: disc;
+    margin-left: 18px;
+}
+
+.margin-content {
+    margin: 15px;
+}
+
+.type-menu {
+    border-bottom: 3px solid $tertiaire;
+    width: 50px;
+    // margin-left: 30px;
+}
+
+.margin-top {
+    margin-top: 50px;
+}
+
+.margin-bottom {
+    margin-bottom: 50px;
+}
+
+header {
+    @extend %width;
+    height: 80px;
+
+    .mt-header {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 35%;
+    }
+}
+
+footer {
+    @extend %width;
+    height: 200px;
+    background-color: $bg-footer;
+    color: #fff;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    ul li {
+        list-style-type: none;
+        line-height: 2;
+        margin-left: -22px;
+    }
+}
+
+.btn {
+    padding: 13px 20px 13px 20px;
+    background: linear-gradient(to bottom right, $secondaire, $primaire);
+    color: #fff;
+    border-radius: 100px;
+    border: 1px solid $secondaire;
+    margin-top: 50px;
+    box-shadow: 0px 2px 5px #929292;
+
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0px 2px 5px #414040;
+    }
+}
+
+.disposition-horizotal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.heart-end-hover {
+    color: #fff;
+    position: absolute;
+    margin-left: -30px;
+    opacity: 0;
+}
+
+.content-grille {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.logo,
+.label-fonct {
+    grid-column: 3;
+    @extend %grid-row;
+}
+
+.ohmyfood-restaurant__desc {
+    margin: 0px 30px 20px 20px;
+    font-size: 17px;
+}
+
+.ohmyfood-restaurant__iconCoeur i {
+    font-size: 30px;
+    color: #000;
+}

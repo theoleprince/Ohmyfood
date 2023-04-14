@@ -1,0 +1,58 @@
+@mixin font-size($size: $font-size) {
+    font-size: $size;
+}
+
+@mixin margin($haut, $droit, $bas, $gauche) {
+    margin: $haut, $droit, $bas, $gauche;
+}
+
+@mixin box-shadow($size1, $size2, $size3, $colour, ) {
+    box-shadow: $size1, $size2, $size3, $colour;
+}
+
+@mixin flexbox {
+    display: flex;
+}
+
+%flexbox {
+    @include flexbox;
+}
+
+//----------------------------------
+
+@mixin inline-flex {
+    display: inline-flex;
+}
+
+%inline-flex {
+    @include inline-flex;
+}
+
+@mixin flex-direction($value) {
+    flex-direction: $value;
+}
+
+%width {
+    width: 100%;
+}
+
+%border-radius {
+    border-radius: 20px;
+}
+
+@mixin font_size_icon($font_size_icon) {
+    font-size: $font_size_icon;
+}
+
+%grid-row {
+    grid-row: 1;
+}
+
+%animation-fill-mode {
+    animation-fill-mode: forwards;
+}
+
+%img-cover {
+    object-fit: cover;
+    object-position: center;
+}

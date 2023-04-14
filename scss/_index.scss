@@ -1,0 +1,119 @@
+main {
+    .conteneurs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ohmyfood-localisation {
+        background-color: #dddada;
+        padding: 25px;
+
+        .mr-icon {
+            margin-right: 10%;
+            color: #636363;
+        }
+    }
+    .grid-template-columns--fonct {
+        grid-template-columns: 0.7fr 0.5fr 2.8fr 1fr;
+        .icon-fonct {
+            grid-column: 2;
+            @extend %grid-row;
+        }
+    }
+    
+
+
+    .ohmyfood-titre {
+        padding: 20px 0px 40px 0px;
+        background-color: $bg-color;
+        @extend %width;
+        box-shadow: 0px 0px 9px #F2F2F2;
+        .margin-titre {
+            margin: 0px 20px 0px 20px;
+        }
+    }
+
+    .card-item {
+        @extend %width;
+        margin: 15px 15px 15px 40px;
+        padding: 25px;
+        box-shadow: 0px 2px 5px #F2F2F2;
+        @extend %border-radius;
+
+        i {
+            color: #636363;
+        }
+
+        &:hover {
+            background: rgba($color: $primaire, $alpha: 0.2);
+
+            i {
+                color: $primaire;
+            }
+        }
+    }
+
+    .ohmyfood-restaurant {
+        background-color: $bg-color;
+        padding: 20px 0px 20px 0px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+    }
+
+    .ohmyfood-restaurant__card {
+        @extend %width;
+        height: 350px;
+        @extend %border-radius;
+        background-color: $blanc;
+        margin: 15px;
+        float: left;
+        box-shadow: 0px 2px 5px #fff;
+        img {
+            @extend %width;
+            height: 270px;
+            border-radius: 20px 20px 0px 0px;
+            @extend %img-cover;
+        }
+
+        .ohmyfood-restaurant__desc {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 30px 20px 20px;
+            @include font-size($font_size_text);
+        }
+
+        .nouveau {
+            padding: 5px 20px 5px 10px;
+            width: 50px;
+            background-color: $tertiaire;
+            color: #37685c;
+            position: absolute;
+            right: 30px;
+            border-radius: 5px;
+            margin-top: 20px;
+
+        }
+    }
+
+    .ohmyfood-restaurant__iconCoeur i {
+        @include font-size(30px);
+        color: #000;
+    }
+
+    .badge {
+        position: absolute;
+        left: 23px;
+        background-color: $primaire;
+        padding: 5px 10px 5px 10px;
+        border-radius: 100%;
+        color: #fff;
+    
+        .position-badge {
+            top: 270px;
+        }
+    }
+
+}
