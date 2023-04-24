@@ -138,8 +138,6 @@ main .ohmyfood-detail__content-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: auto;
-  height: 80px;
   background-color: #fff;
   box-shadow: 0px 2px 5px #e4e4e4;
   transform: scale(1);
@@ -149,15 +147,14 @@ main .ohmyfood-detail__content-card {
 }
 main .ohmyfood-detail__content-card .card-description {
   padding: 0px 0px 0px 20px;
+  flex-grow: 1;
+  height: auto;
+  overflow: hidden;
+  white-space: nowrap;
 }
-main .ohmyfood-detail__content-card .card-description label {
-  line-height: 1.8;
-}
-main .ohmyfood-detail__content-card .card-description:nth-child(1) {
-  flex: 3.5;
-}
-main .ohmyfood-detail__content-card .card--price:nth-child(2) {
-  flex: 0.5;
+main .ohmyfood-detail__content-card .card-description .overflow-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main .ohmyfood-detail__content-card .card--check-circle {
   display: flex;
