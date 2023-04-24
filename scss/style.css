@@ -156,6 +156,9 @@ main .ohmyfood-detail__content-card .card-description .overflow-ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+main .ohmyfood-detail__content-card .card-description .font-weight {
+  font-weight: bold;
+}
 main .ohmyfood-detail__content-card .card--check-circle {
   display: flex;
   justify-content: center;
