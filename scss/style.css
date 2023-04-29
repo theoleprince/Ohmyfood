@@ -9,11 +9,11 @@ main .ohmyfood-restaurant__card, main .card-item {
 }
 
 .logo,
-.label-fonct, main .grid-template-columns--header .retour, main .grid-template-columns--fonct .icon-fonct {
+.label-fonct, main .grid-template-columns--fonct .icon-fonct {
   grid-row: 1;
 }
 
-.heart-end-hover:hover, .ohmyfood-detail__content-animation {
+.ohmyfood-detail__content-animation {
   animation-fill-mode: forwards;
 }
 
@@ -179,12 +179,6 @@ main .ohmyfood-detail__content-card:hover .card--check-circle {
 main .ohmyfood-detail__content-card .card--price {
   margin: 2rem 1rem 1rem 0;
 }
-main .grid-template-columns--header {
-  grid-template-columns: 0.5fr 0.5fr 2.5fr;
-}
-main .grid-template-columns--header .retour {
-  grid-column: 1;
-}
 main .icon-top {
   margin-top: 25px;
   font-size: 22px;
@@ -271,11 +265,6 @@ main .ohmyfood-detail__titre {
   transform: rotate(1turn);
 }
 
-.heart-end-hover:hover {
-  animation-name: opacity, coulor;
-  animation-duration: 3s;
-}
-
 body {
   margin-left: 0px;
   margin-right: 0px;
@@ -312,6 +301,9 @@ h2 {
 
 header {
   height: 80px;
+}
+header .retour {
+  margin-left: 20px !important;
 }
 header .mt-header {
   margin-top: 20px;
@@ -362,13 +354,6 @@ footer ul li {
   text-align: center;
 }
 
-.heart-end-hover {
-  color: #fff;
-  position: absolute;
-  margin-left: -30px;
-  opacity: 0;
-}
-
 .content-grille {
   display: grid;
   grid-gap: 10px;
@@ -384,9 +369,30 @@ footer ul li {
   font-size: 17px;
 }
 
-.ohmyfood-restaurant__iconCoeur i {
-  font-size: 30px;
-  color: #000;
+.heart-end-hover {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  font-size: 0px;
+  transition: top 0.7s, font-size 0.7s, left 0.7s;
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heart-start {
+  display: inline-block;
+  position: relative;
+  font-size: 40px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.heart-start:hover .heart-end-hover {
+  top: 2px;
+  font-size: 35px;
+  left: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

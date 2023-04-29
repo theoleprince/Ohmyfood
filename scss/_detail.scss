@@ -74,14 +74,14 @@ main {
             margin: 2rem 1rem 1rem 0;
         }
     }
-    .grid-template-columns--header {
-        grid-template-columns: 0.5fr 0.5fr 2.5fr;
-        .retour {
-            grid-column: 1;
-            @extend %grid-row;
+    // .grid-template-columns--header {
+    //     grid-template-columns: 0.5fr 0.5fr 1.5fr;
+    //     .retour {
+    //         grid-column: 1;
+    //         @extend %grid-row;
         
-        }
-    }
+    //     }
+    // }
     
     .icon-top {
         margin-top: 25px;

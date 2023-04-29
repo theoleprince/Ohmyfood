@@ -36,7 +36,9 @@ h2 {
 header {
     @extend %width;
     height: 80px;
-
+    .retour {
+        margin-left: 20px !important;
+    }
     .mt-header {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -92,13 +94,6 @@ footer {
     text-align: center;
 }
 
-.heart-end-hover {
-    color: #fff;
-    position: absolute;
-    margin-left: -30px;
-    opacity: 0;
-}
-
 .content-grille {
     display: grid;
     grid-gap: 10px;
@@ -115,7 +110,34 @@ footer {
     font-size: 17px;
 }
 
-.ohmyfood-restaurant__iconCoeur i {
-    font-size: 30px;
-    color: #000;
+// .ohmyfood-restaurant__iconCoeur i {
+//     font-size: 30px;
+//     color: #000;
+// }
+
+.heart-end-hover {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    font-size: 0px;
+    transition: top 0.7s, font-size 0.7s, left 0.7s;
+    background: linear-gradient(to bottom, $primaire 0%,$secondaire 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heart-start {
+    display: inline-block;
+    position: relative;
+    font-size: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.heart-start:hover .heart-end-hover {
+    top: 2px;
+    font-size: 35px;
+    left: 2px;
+
 }
