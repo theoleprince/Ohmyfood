@@ -45,7 +45,7 @@ header {
     }
 
     img {
-        width: 35%;
+        width: 20%;
     }
 }
 
@@ -91,7 +91,7 @@ footer {
 }
 
 .text-align-center {
-    text-align: center;
+    text-align: center !important;
 }
 
 .content-grille {
@@ -103,6 +103,11 @@ footer {
 .label-fonct {
     grid-column: 3;
     @extend %grid-row;
+    text-align: start;
+}
+
+.font-weight {
+    font-weight: bold;
 }
 
 .ohmyfood-restaurant__desc {
@@ -117,8 +122,8 @@ footer {
 
 .heart-end-hover {
     position: absolute;
-    top: 35px;
-    left: 20px;
+    top: 28px;
+    left: 15px;
     font-size: 0px;
     transition: top 0.7s, font-size 0.7s, left 0.7s;
     background: linear-gradient(to bottom, $primaire 0%,$secondaire 100%);
@@ -130,14 +135,22 @@ footer {
 .heart-start {
     display: inline-block;
     position: relative;
-    font-size: 40px;
+    font-size: 30px;
     overflow: hidden;
     cursor: pointer;
 }
 
 .heart-start:hover .heart-end-hover {
     top: 2px;
-    font-size: 35px;
-    left: 2px;
+    font-size: 25px;
+    left: 2.5px;
 
+}
+
+@media all and (min-width: 0px) and (max-width: 767.9px) {
+    header {
+        img {
+            width: 35%;
+        }
+    }
 }

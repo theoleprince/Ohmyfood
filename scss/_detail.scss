@@ -1,4 +1,29 @@
+header {
+    .grid-template-columns--header {
+        grid-template-columns: 0.5fr 12fr;
+        .retour {
+            grid-column: 1;
+            @extend %grid-row;
+            i {
+                font-size: 20px;
+            }
+        }
+
+        .logo {
+            grid-column: 2;
+            @extend %grid-row;
+            img{
+                width: 20%;
+            }
+        }
+    }
+}
 main {
+    .content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
     .ohmyfood-detail {
         display: flex;
         flex-direction: column;
@@ -35,6 +60,7 @@ main {
         border-radius: 20px;
         font-size: $font_size_text;
         margin: 15px;
+        width: 30%;
         .card-description {
             padding: 0px 0px 0px 20px;
             flex-grow: 1;
@@ -44,9 +70,6 @@ main {
             .overflow-ellipsis {
                 text-overflow: ellipsis;
                 overflow: hidden;
-            }
-            .font-weight {
-                font-weight: bold;
             }
         }
 
@@ -74,14 +97,7 @@ main {
             margin: 2rem 1rem 1rem 0;
         }
     }
-    // .grid-template-columns--header {
-    //     grid-template-columns: 0.5fr 0.5fr 1.5fr;
-    //     .retour {
-    //         grid-column: 1;
-    //         @extend %grid-row;
-        
-    //     }
-    // }
+    
     
     .icon-top {
         margin-top: 25px;
@@ -91,4 +107,31 @@ main {
     .ohmyfood-detail__titre {
         margin-left: -20px;
     }
+
 }
+
+@media all and (min-width: 0px) and (max-width: 767.9px) {
+    header {
+        .grid-template-columns--header {
+            .retour {
+                i {
+                    font-size: 20px;
+                }
+            }
+            .logo {
+                img{
+                    width: 35%;
+                }
+            }
+        }
+    }
+   main {
+    .ohmyfood-detail__content-card {
+        width: auto;
+    }
+    .content {
+        flex-direction: column;
+        justify-content: center;
+    }
+   }
+  }

@@ -2,6 +2,7 @@ main {
     .conteneurs {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .ohmyfood-localisation {
@@ -9,15 +10,16 @@ main {
         padding: 25px;
 
         .mr-icon {
-            margin-right: 10%;
+            margin-right: 10px;
             color: #636363;
         }
     }
     .grid-template-columns--fonct {
-        grid-template-columns: 0.7fr 0.5fr 2.8fr 1fr;
+        grid-template-columns: 0fr 0.5fr 3.8fr;
         .icon-fonct {
             grid-column: 2;
             @extend %grid-row;
+            margin-top: 5px;
         }
     }
     
@@ -34,9 +36,9 @@ main {
     }
 
     .card-item {
-        @extend %width;
+        width: 25%;
         margin: 15px 15px 15px 40px;
-        padding: 25px;
+        padding: 25px 25px 25px 0px;
         box-shadow: 0px 2px 5px $bg-color;
         background-color: $bg-color;
         @extend %border-radius;
@@ -65,7 +67,7 @@ main {
     }
 
     .ohmyfood-restaurant__card {
-        @extend %width;
+        width: 46%;
         height: 350px;
         @extend %border-radius;
         background-color: $blanc;
@@ -105,18 +107,44 @@ main {
     }
 
     .badge {
-        position: absolute;
-        left: 23px;
+        position: relative;
+        left: -15px;
         background-color: $primaire;
         padding: 5px 10px 5px 10px;
         border-radius: 100%;
         color: #fff;
     
-        .position-badge {
-            top: 270px;
-        }
+        // .position-badge1 {
+        //     left: 203px;
+        // }
+
+        // .position-badge2 {
+        //     top: 270px;
+        // }
+
+        // .position-badge3 {
+        //     top: 270px;
+        // }
     }
     .ohmyfood-restaurant__titre {
         line-height: 1.5;
+    }
+}
+
+@media all and (min-width: 0px) and (max-width: 767.9px) {
+    main {
+    .card-item {
+        width: 100%;
+    }
+
+    .ohmyfood-restaurant__card {
+        width: 100%;
+    }
+}
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+    main .card-item {
+        width: 22%;
     }
 }

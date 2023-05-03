@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Shrikhand");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-footer, header, main .ohmyfood-detail__content, main .ohmyfood-detail__img img, main .ohmyfood-detail__img, main .ohmyfood-restaurant__card img, main .ohmyfood-restaurant__card, main .card-item, main .ohmyfood-titre {
+footer, header, main .ohmyfood-detail__content, main .ohmyfood-detail__img img, main .ohmyfood-detail__img, main .ohmyfood-restaurant__card img, main .ohmyfood-titre {
   width: 100%;
 }
 
@@ -9,7 +9,7 @@ main .ohmyfood-restaurant__card, main .card-item {
 }
 
 .logo,
-.label-fonct, main .grid-template-columns--fonct .icon-fonct {
+.label-fonct, header .grid-template-columns--header .logo, header .grid-template-columns--header .retour, main .grid-template-columns--fonct .icon-fonct {
   grid-row: 1;
 }
 
@@ -25,20 +25,22 @@ main .ohmyfood-detail__img img, main .ohmyfood-restaurant__card img {
 main .conteneurs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 main .ohmyfood-localisation {
   background-color: #dddada;
   padding: 25px;
 }
 main .ohmyfood-localisation .mr-icon {
-  margin-right: 10%;
+  margin-right: 10px;
   color: #636363;
 }
 main .grid-template-columns--fonct {
-  grid-template-columns: 0.7fr 0.5fr 2.8fr 1fr;
+  grid-template-columns: 0fr 0.5fr 3.8fr;
 }
 main .grid-template-columns--fonct .icon-fonct {
   grid-column: 2;
+  margin-top: 5px;
 }
 main .ohmyfood-titre {
   padding: 20px 0px 40px 0px;
@@ -49,8 +51,9 @@ main .ohmyfood-titre .margin-titre {
   margin: 0px 20px 0px 20px;
 }
 main .card-item {
+  width: 25%;
   margin: 15px 15px 15px 40px;
-  padding: 25px;
+  padding: 25px 25px 25px 0px;
   box-shadow: 0px 2px 5px #F2F2F2;
   background-color: #F2F2F2;
 }
@@ -72,6 +75,7 @@ main .ohmyfood-restaurant a {
   color: black;
 }
 main .ohmyfood-restaurant__card {
+  width: 46%;
   height: 350px;
   background-color: #fff;
   margin: 15px;
@@ -103,20 +107,51 @@ main .ohmyfood-restaurant__iconCoeur i {
   color: #000;
 }
 main .badge {
-  position: absolute;
-  left: 23px;
+  position: relative;
+  left: -15px;
   background-color: #9356DC;
   padding: 5px 10px 5px 10px;
   border-radius: 100%;
   color: #fff;
 }
-main .badge .position-badge {
-  top: 270px;
-}
 main .ohmyfood-restaurant__titre {
   line-height: 1.5;
 }
 
+@media all and (min-width: 0px) and (max-width: 767.9px) {
+  main .card-item {
+    width: 100%;
+  }
+  main .ohmyfood-restaurant__card {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 959px) {
+  main .card-item {
+    width: 22%;
+  }
+}
+header .grid-template-columns--header {
+  grid-template-columns: 0.5fr 12fr;
+}
+header .grid-template-columns--header .retour {
+  grid-column: 1;
+}
+header .grid-template-columns--header .retour i {
+  font-size: 20px;
+}
+header .grid-template-columns--header .logo {
+  grid-column: 2;
+}
+header .grid-template-columns--header .logo img {
+  width: 20%;
+}
+
+main .content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
 main .ohmyfood-detail {
   display: flex;
   flex-direction: column;
@@ -145,6 +180,7 @@ main .ohmyfood-detail__content-card {
   border-radius: 20px;
   font-size: 17px;
   margin: 15px;
+  width: 30%;
 }
 main .ohmyfood-detail__content-card .card-description {
   padding: 0px 0px 0px 20px;
@@ -156,9 +192,6 @@ main .ohmyfood-detail__content-card .card-description {
 main .ohmyfood-detail__content-card .card-description .overflow-ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
-}
-main .ohmyfood-detail__content-card .card-description .font-weight {
-  font-weight: bold;
 }
 main .ohmyfood-detail__content-card .card--check-circle {
   display: flex;
@@ -185,6 +218,25 @@ main .icon-top {
 }
 main .ohmyfood-detail__titre {
   margin-left: -20px;
+}
+
+@media all and (min-width: 0px) and (max-width: 767.9px) {
+  header .grid-template-columns--header .retour i {
+    font-size: 20px;
+  }
+  header .grid-template-columns--header .logo img {
+    width: 35%;
+  }
+  main .ohmyfood-detail__content-card {
+    width: auto;
+  }
+  main .content {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+body {
+  width: auto;
 }
 
 @keyframes coulor {
@@ -310,7 +362,7 @@ header .mt-header {
   margin-bottom: 20px;
 }
 header img {
-  width: 35%;
+  width: 20%;
 }
 
 footer {
@@ -351,7 +403,7 @@ footer ul li {
 }
 
 .text-align-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .content-grille {
@@ -362,6 +414,11 @@ footer ul li {
 .logo,
 .label-fonct {
   grid-column: 3;
+  text-align: start;
+}
+
+.font-weight {
+  font-weight: bold;
 }
 
 .ohmyfood-restaurant__desc {
@@ -371,8 +428,8 @@ footer ul li {
 
 .heart-end-hover {
   position: absolute;
-  top: 35px;
-  left: 20px;
+  top: 28px;
+  left: 15px;
   font-size: 0px;
   transition: top 0.7s, font-size 0.7s, left 0.7s;
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
@@ -384,15 +441,21 @@ footer ul li {
 .heart-start {
   display: inline-block;
   position: relative;
-  font-size: 40px;
+  font-size: 30px;
   overflow: hidden;
   cursor: pointer;
 }
 
 .heart-start:hover .heart-end-hover {
   top: 2px;
-  font-size: 35px;
-  left: 2px;
+  font-size: 25px;
+  left: 2.5px;
+}
+
+@media all and (min-width: 0px) and (max-width: 767.9px) {
+  header img {
+    width: 35%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
